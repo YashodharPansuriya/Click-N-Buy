@@ -1,0 +1,33 @@
+{% extends 'blog/basic.html' %}
+{% block body %}
+{% load static %}
+<div class="container mt-3">
+    <div class="row my-2">
+
+        {% for i in allblog %}
+        <div class="col-md-6">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">{{i.0.title}}</strong>
+                    <h3 class="mb-0">{{i.0.head0}}</h3>
+                    <div class="mb-1 text-muted">{{i.0.pub_date}}</div>
+                    <div class="mb-1 ">{{i.0.head1}}</div>
+                    <p class="card-text mb-auto">{{i.0.chead1|slice:"0:53"}}...</p>
+                    <a href="/blog/blogpost/{{i.0.post_id}}" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="/media/{{i.0.thumbnail}}" class="bd-placeholder-img" width="200" height="250"
+                         aria-label="Placeholder: Thumbnail">
+                    <title>Placeholder</title>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+
+{% endblock%}
