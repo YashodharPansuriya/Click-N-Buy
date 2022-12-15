@@ -3,12 +3,12 @@ Build the E-commerce website using Django framework and SQLite database which co
 
 # Customer Interface:
 
-shops for a product and changes quantity
-The customer adds an item to the cart
-Customer views cart
-Customer sends order
+shops for a product and changes quantity,
+The customer adds an item to the cart,
+Customer views cart,
+Customer sends order.
 
 # Admin Interface:
 
-Admin logs in
-Admin inserts, removes and modifies item
+Admin logs in,
+Admin inserts, removes and modifies item.
